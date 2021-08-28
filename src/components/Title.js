@@ -1,14 +1,14 @@
 /* eslint-disable arrow-body-style */
-import React from 'react'
+import React, { memo } from 'react';
+import { TitleWrapper } from './Title.styled';
 
-const Title = ({title, subtitle}) => {
-    return (
-        <div>
-            <h1>{title}</h1>
-            <p>
-                {subtitle}
-            </p>
-        </div>
-    )
-}
-export default Title;
+const Title = ({ title, subtitle }) => {
+  return (
+    <TitleWrapper>
+      <h1>{title}</h1>
+      <p>{subtitle}</p>
+    </TitleWrapper>
+  );
+};
+
+export default memo(Title);
